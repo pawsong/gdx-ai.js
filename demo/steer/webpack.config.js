@@ -1,4 +1,5 @@
 const path = require('path');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: './src/entry.ts',
@@ -20,6 +21,9 @@ module.exports = {
       { test: /\.ts(x?)$/, loader: `awesome-typescript` },
     ],
   },
+  plugins: [
+    new CopyWebpackPlugin([{ from: 'index.html' }, { from: 'style.css' }]),
+  ],
   devtool: 'cheap-module-source-map',
   devServer: {
     open: true,

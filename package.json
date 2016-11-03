@@ -12,6 +12,8 @@
     "start": "npm run build:watch",
     "lint": "tslint -c tslint.json \"src/**/*.ts\"",
     "test": "npm run lint",
+    "preversion": "npm run prepublish",
+    "prepublish": "npm run build && npm test",
     "publish": "npm run build:demo && npm run gh-pages",
     "gh-pages": "gh-pages -d demo/steer/dist"
   },
