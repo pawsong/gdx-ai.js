@@ -1,0 +1,35 @@
+{
+  "name": "gdx-ai",
+  "version": "0.1.0",
+  "description": "gdx-ai TypeScript port",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "clean": "rimraf lib",
+    "build": "npm run clean && tsc",
+    "build:watch": "npm run build -- --watch",
+    "build:demo": "cd demo/steer && npm install",
+    "start": "npm run build:watch",
+    "lint": "tslint -c tslint.json \"src/**/*.ts\"",
+    "test": "npm run lint",
+    "publish": "npm run build:demo && npm run gh-pages",
+    "gh-pages": "gh-pages -d demo/steer/dist"
+  },
+  "author": "Giff Song <giff.song@gmail.com>",
+  "license": "MIT",
+  "files": [
+    "src",
+    "lib"
+  ],
+  "dependencies": {
+    "@types/gl-matrix": "^2.2.32",
+    "gl-matrix": "^2.3.2"
+  },
+  "devDependencies": {
+    "gh-pages": "^0.11.0",
+    "rimraf": "^2.5.4",
+    "source-map-loader": "^0.1.5",
+    "tslint": "^3.15.1",
+    "typescript": "^2.0.3"
+  }
+}
