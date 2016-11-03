@@ -6886,7 +6886,7 @@
 	        // Also, note that timeToCollision would be NaN due to the indeterminate form 0/0 and,
 	        // since any comparison involving NaN returns false, it would become the shortestTime,
 	        // so defeating the algorithm.
-	        if (relativeSpeed2 == 0)
+	        if (relativeSpeed2 === 0)
 	            return false;
 	        var timeToCollision = -this.relativePosition.dot(this.relativeVelocity) / relativeSpeed2;
 	        // If timeToCollision is negative, i.e. the owner is already moving away from the the neighbor,
@@ -6940,7 +6940,7 @@
 	        // firstNeighbor has been set to null when entering this method. In fact, we have just
 	        // executed findNeighbors(this) that has possibly set firstNeighbor to a non null value
 	        // through the method reportNeighbor defined below.
-	        if (neighborCount == 0 || this.firstNeighbor == null)
+	        if (neighborCount === 0 || this.firstNeighbor == null)
 	            return steering.setZero();
 	        // If we're going to hit exactly, or if we're already
 	        // colliding, then do the steering based on current position.
