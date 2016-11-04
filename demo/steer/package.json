@@ -8,7 +8,7 @@
   "dependencies": {
     "@types/core-js": "^0.9.34",
     "@types/dat-gui": "^0.5.29",
-    "@types/gl-matrix": "^2.2.32",
+    "@types/gl-matrix": "^2.2.33",
     "@types/pixi.js": "^3.0.30",
     "@types/query-string": "^3.0.28",
     "@types/stats": "^0.16.30",
@@ -16,6 +16,7 @@
     "core-js": "^2.4.1",
     "dat.gui": "github:dataarts/dat.gui#v0.6.0",
     "gdx-ai": "../../",
+    "gl-matrix": "^2.3.2",
     "max-safe-integer": "^1.0.1",
     "pixi.js": "^4.0.3",
     "query-string": "^4.2.3",

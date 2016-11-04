@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import Set = require('core-js/es6/set');
-import { vec2, mat3 } from 'gl-matrix';
+import vec2 = require('gl-matrix/src/gl-matrix/vec2');
+import mat3 = require('gl-matrix/src/gl-matrix/mat3');
 import FollowPath from 'gdx-ai/lib/steer/behaviors/FollowPath';
 import Jump, {
   JumpDescriptor,

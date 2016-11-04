@@ -1,6 +1,6 @@
-import { vec2, mat3 } from 'gl-matrix';
+import vec2 = require('gl-matrix/src/gl-matrix/vec2');
+import mat3 = require('gl-matrix/src/gl-matrix/mat3');
 import FollowPath from 'gdx-ai/lib/steer/behaviors/FollowPath';
-import Vector2 from 'gdx-ai/lib/math/Vector2';
 import Vector3 from 'gdx-ai/lib/math/Vector3';
 import LinePath, { LinePathParam } from 'gdx-ai/lib/steer/utils/paths/LinePath';
 import dat = require('dat.gui/build/dat.gui');

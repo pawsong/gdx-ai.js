@@ -1,7 +1,6 @@
 declare const require: any;
 
-import { vec2 as Vec2 } from 'gl-matrix';
-const vec2: typeof Vec2 = require('gl-matrix/src/gl-matrix/vec2');
+import vec2 = require('gl-matrix/src/gl-matrix/vec2');
 
 import Vector from './Vector';
 
@@ -10,13 +9,13 @@ import Vector from './Vector';
  * @author badlogicgames@gmail.com
  */
 class Vector2 implements Vector<Vector2> {
-  public data: Vec2;
+  public data: vec2;
 
   /**
    * Constructs a vector from the given vector
    * @param v The vector
    */
-  constructor(data?: Vec2) {
+  constructor(data?: vec2) {
     this.data = data || vec2.create();
   }
 
