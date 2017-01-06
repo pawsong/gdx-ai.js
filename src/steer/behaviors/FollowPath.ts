@@ -214,12 +214,14 @@ class FollowPath<T extends Vector<T>, P extends PathParam> extends Arrive<T> {
       }
     }
 
-    // Seek the target position
-    steering.linear
-      .copy(this.internalTargetPosition)
-      .sub(this.owner.getPosition())
-      .nor()
-      .scale(this.getActualLimiter().getMaxLinearAcceleration());
+    if (this.owner.getLinearVelocity().len() < this.owner.getMaxLinearSpeed()) {
+      // Seek the target position
+      steering.linear
+        .copy(this.internalTargetPosition)
+        .sub(this.owner.getPosition())
+        .nor()
+        .scale(this.getActualLimiter().getMaxLinearAcceleration());
+    }
 
     // No angular acceleration
     steering.angular = 0;
